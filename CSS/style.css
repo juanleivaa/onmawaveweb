@@ -1,0 +1,426 @@
+/*===================================
+=====colores predeterminados=========
+====================================*/
+
+:root{
+    --color-primario: rgb(0, 0, 0);
+    --color-secundario:rgb(255, 255, 255);
+    --color-tercero:rgb(128,128,128);
+    --color-cuartomenosgris:rgb(215, 215, 215);
+
+}
+
+
+
+/*===================================
+========== inicio NAVBAR=============
+====================================*/
+
+
+
+
+header{
+    display: flex;
+    flex-flow: column;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    width: 100%;
+}
+
+/* Efecto de desplazamiento al pasar el cursor sobre los elementos */
+.nav-item:hover {
+    transform: translateY(-5px);
+}
+
+.navbar {
+    padding:0;
+}
+
+.nav-item {
+    margin: 0 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+
+/*estilo para los elementos*/
+.nav-link {
+    text-decoration: none;
+    color: var(--color-tercero);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+/*orden de los elementos*/
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
+
+
+
+
+/*ANIMADO PARA LOS ELEMENTOS DEL NAV - LOGO Y BARRA */
+
+/* Efecto de subrayado en los enlaces */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primario); /* Cambia el color según tus preferencias */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+/* Efecto de cambio de color al pasar el cursor sobre los enlaces */
+.nav-link:hover {
+    color:var(--color-primario); /* Cambia el color según tus preferencias */
+}
+/* Efecto de desplazamiento al pasar el cursor sobre los elementos */
+.nav-item:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+/*Animacion para el logo*/
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+/* Estilos para la barra de búsqueda */
+.form-control {
+    width: 100%; /* Ancho del 100% para que sea responsive */
+    max-width: 400px; /* Ancho máximo para evitar que se expanda demasiado */
+    border-radius: 20px; /* Bordes redondeados */
+    border-color: #ccc; /* Color del borde */
+    padding: 10px; /* Espaciado interno */
+    transition: all 0.3s; /* Transición suave */
+}
+
+.form-control:focus {
+    border-color: var(--color-secundario); /* Color del borde al estar enfocada */
+    box-shadow: 0 0 5px var(--color-primario); /* Sombra al estar enfocada */
+    outline: none; /* Eliminar contorno al estar enfocada */
+}
+
+
+/*===================================
+=========fin NAVBAR==================
+====================================*/
+
+
+
+
+
+
+/*===================================
+=========MENSAJE DE AYUDA=============
+====================================*/
+
+
+.chat-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #00000088;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    animation: slideIn 0.5s ease-out forwards;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    /* border-radius: 50% ;  */
+    color: rgba(254, 254, 254, 0.724);
+    justify-content: center;
+    text-align: center;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/*===================================
+=========MENSAJE DE AYUDA=============
+====================================*/
+
+
+
+/*===================================
+=========SECCION MAIN=============
+====================================*/
+
+
+
+/*===================================
+=========incio seccion sales$$$=============
+====================================*/
+
+.hero{
+    background-color: var(--color-cuartomenosgris);
+    /* min-height: 450px; */
+    text-align: center;
+    
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-principal{
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-principal h2 {
+    color: var(--color-tercero);
+    font-family: "Roboto Mono", monospace;
+    font-weight: 100;
+    font-size: 2.5rem;
+    border-top: 1px solid var(--color-primario);
+    padding: 5px;
+}
+
+.hero-principal h1 {
+    color: var(--color-primario);
+    font-family: "Archivo", sans-serif; 
+    font-weight: bold;
+    font-size: 7rem; 
+}
+
+
+/*===================================
+=========fin seccion sales$$$=============
+====================================*/
+
+
+/*===================================
+=========botones=============
+====================================*/
+
+.square-btn {
+    border-radius: 0; /* Elimina los bordes redondos */
+}
+
+/*===================================
+=========botones=============
+====================================*/
+
+.buy-button , .star-button{
+    background-color: black;
+    border-radius: 0%;
+    border: 1px solid var(--color-primario);
+    color: white;
+    
+}
+
+.star-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.buy-button:hover{
+    background-color:black ;
+    color: white;
+}
+  
+
+/*===================================
+=========inicio seccion cards===============
+====================================*/
+
+
+
+.products {
+    display: flex;
+    justify-content: center;
+  }
+  
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+  }
+  
+.card:hover {
+    transform: scale(1.1);
+  }
+  
+.card-body {
+    text-align: center;
+  }
+  
+
+
+/*======================================
+=AJUSTES PARA QUE SE VEAN LOS PRODCUTOS=
+=DEPENDIENDO EL DISPOSITVO==============
+========================================*/
+
+/*pc*/
+@media (max-width: 767.98px) {
+    
+    .col-12 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-top: 30px;
+    }
+}
+  
+/*tablet*/
+@media (min-width: 768px) {
+    
+    .col-md-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+      margin-top: 30px;
+
+    }
+}
+  
+/*phone*/
+@media (min-width: 992px) {
+    .col-lg-2 {
+      flex: 0 0 20%;
+      max-width: 20%;
+      margin-top: 30px;
+
+    }
+}
+
+
+/*===================================
+========= fin seccion cards=============
+====================================*/
+  
+
+
+
+/*===================================
+========ADAPTABLE RESPONSIVO=========
+====================================*/
+@media screen and(max-width:890px) {
+    div .collapse{
+        display: none;
+    }
+}
+
+@media screen and (min-width:700px){
+    .hero-inferior-imagen{
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .hero-principal h1 {
+        font-size: 3.5rem;
+    }
+    .hero-principal h2 {
+        font-size: 2.5rem; /* Tamaño reducido para pantallas medianas */
+    }
+}
+
+/* Estilo para pantallas pequeñas (831px - 1047px) */
+@media (max-width: 1047px) {
+    .hero-principal h1 {
+        font-size: 2.5rem;
+    }
+    .hero-principal h2 {
+        font-size: 1.5rem; /* Tamaño reducido para pantallas pequeñas */
+    }
+}
+
+/* Estilo para pantallas extra pequeñas (menos de 830px) */
+@media (max-width: 830px) {
+    .hero-principal h1 {
+        font-size: 1.7rem;
+    }
+    .hero-principal h2 {
+        font-size: 0.7rem; /* Tamaño reducido para pantallas extra pequeñas */
+    }
+}
+
+@media (max-width: 1350px) {
+    .carousel-caption h1{
+        font-size: 3.5rem;
+    }
+    .carousel-caption h2 {
+        font-size: 2.5rem; /* Tamaño reducido para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 1047px) {
+    .carousel-caption h1{
+        font-size: 2.5rem;
+    }
+    .carousel-caption h2 {
+        font-size: 1.5rem; /* Tamaño reducido para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 830px) {
+    .carousel-caption h1{
+        font-size: 1.7rem;
+    }
+    .carousel-caption h2 {
+        font-size: 0.7rem; /* Tamaño reducido para pantallas pequeñas */
+    }
+}
+
+
+
+
+
+
+
